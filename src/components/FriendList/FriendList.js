@@ -1,4 +1,4 @@
-import { Friend, FriendsList, FriendCard } from './FriedList.styled';
+import { Friend, FriendsList, FriendCard, Status } from './FriedList.styled';
 
 export const FriendList = ({ friends }) => {
   return (
@@ -15,7 +15,7 @@ export const FriendList = ({ friends }) => {
 const FriendListItem = ({ item: { isOnline, avatar, name } }) => {
   return (
     <FriendCard>
-      <span class="status" $status={isOnline}></span>
+      <Status class="status" $status={isOnline}></Status>
       <img class="avatar" src={avatar} alt="User avatar" width="48" />
       <p class="name">{name}</p>
     </FriendCard>

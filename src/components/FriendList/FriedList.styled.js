@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 const getBgColor = props => {
   switch (props.$status) {
-    case 'true':
+    case true:
       return 'green';
-    case 'false':
+    case false:
       return 'red';
     default:
       return 'yellow';
@@ -27,5 +27,12 @@ export const FriendCard = styled.div`
   border-radius: 8px;
   border: 2px solid black;
   padding: 10px;
+`;
+
+export const Status = styled.span`
+  width: 20px;
+  height: 20px;
+  margin-top: 15px;
+  border-radius: 50%;
   background-color: ${getBgColor};
 `;
